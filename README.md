@@ -21,7 +21,7 @@
 | Họ và tên | MSSV | Vai trò |
 |---|---|---|
 | Trần Đặng Khánh Sơn | 2312979 | Trưởng nhóm · Firmware |
-| Nguyễn Thị Huyền Trân | 2313555 | Thành viên · GUI|
+| Nguyễn Thị Huyền Trân | 2313555 | Thành viên · GUI |
 | Phan Khánh Toàn | 2313494 | Thành viên · Firmware |
 
 ---
@@ -139,9 +139,14 @@ SAVE            → Lưu X/Y/Z hiện tại vào EEPROM
 
 ## 🚀 Hướng dẫn chạy dự án (Firmware)
 
-### Yêu cầu
-- [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) v1.13+
-- Driver CP2102 (USB–UART)
+### Công cụ sử dụng
+
+| Công cụ | Mục đích | Link |
+|---|---|---|
+| STM32CubeMX | Cấu hình ngoại vi, sinh code HAL | [Tải về](https://www.st.com/en/development-tools/stm32cubemx.html) |
+| Keil MDK-ARM (µVision) | Biên dịch & nạp firmware | [Tải về](https://www.keil.com/download/product/) |
+| Driver CP2102 | Kết nối USB–UART với PC | [Tải về](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) |
+| ST-Link Driver | Nạp firmware qua ST-Link | Đi kèm kit Discovery |
 
 ### Các bước
 
@@ -150,10 +155,12 @@ SAVE            → Lưu X/Y/Z hiện tại vào EEPROM
 git clone https://github.com/MMikeDangon1408/STM32F4-I2C-UART-DMA.git
 ```
 
-2. Mở **STM32CubeIDE** → **File** → **Import** → **Existing Projects into Workspace** → chọn thư mục vừa clone
-3. Build: **Ctrl + B**
-4. Nạp firmware: **Run** → **Run As** → **STM32 Cortex-M C/C++ Application**
-5. Mở `GUI/gui_stm32.exe` để điều khiển và quan sát dữ liệu
+2. Mở **STM32CubeMX** → **File** → **Load Project** → chọn file `.ioc` trong thư mục vừa clone
+3. Kiểm tra cấu hình ngoại vi → bấm **Generate Code** (Toolchain: MDK-ARM)
+4. Mở file `MDK-ARM\BTNChuong4_Nhom5.uvprojx` bằng **Keil µVision**
+5. Build: **F7** hoặc **Project** → **Build Target**
+6. Nạp firmware: **Flash** → **Download** (hoặc **F8**)
+7. Mở `GUI/gui_stm32.exe` để điều khiển và quan sát dữ liệu
 
 ---
 

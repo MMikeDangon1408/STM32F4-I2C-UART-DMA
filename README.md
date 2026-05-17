@@ -22,7 +22,7 @@
 |---|---|---|
 | Trần Đặng Khánh Sơn | 2312979 | Trưởng nhóm · Firmware |
 | Nguyễn Thị Huyền Trân | 2313555 | Thành viên · GUI|
-| Phan Khánh Toàn | 2313494 | Thành viên |
+| Phan Khánh Toàn | 2313494 | Thành viên · Firmware |
 
 ---
 

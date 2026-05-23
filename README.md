@@ -16,16 +16,6 @@
 
 ---
 
-## 👥 Thành viên nhóm
-
-| Họ và tên | MSSV | Vai trò |
-|---|---|---|
-| Trần Đặng Khánh Sơn | 2312979 | Trưởng nhóm · Firmware |
-| Nguyễn Thị Huyền Trân | 2313555 | Thành viên · GUI |
-| Phan Khánh Toàn | 2313494 | Thành viên · Firmware |
-
----
-
 ## 🔧 Phần cứng sử dụng
 
 | Linh kiện | Mô tả | Giao tiếp |
